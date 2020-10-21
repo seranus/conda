@@ -20,7 +20,7 @@ log = getLogger(__name__)
 
 # The idea is to mock this to return '/dev/null' (or some temp file) instead.
 def get_user_environments_txt_file(userhome='~'):
-    return expand(join(userhome, '.conda', 'environments.txt'))
+    return expand(join('$CONDA_ROOT', 'environments.txt'))
 
 
 def register_env(location):
