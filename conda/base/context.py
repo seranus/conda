@@ -69,7 +69,8 @@ _arch_names = {
     64: 'x86_64',
 }
 
-user_rc_path = abspath(expanduser('~/.condarc'))
+# user_rc_path = abspath(expanduser('~/.condarc'))
+user_rc_path = join(sys.prefix, '.condarc')
 sys_rc_path = join(sys.prefix, '.condarc')
 
 

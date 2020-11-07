@@ -20,9 +20,10 @@ log = getLogger(__name__)
 
 # duplicated code in the interest of import efficiency
 on_win = bool(sys.platform == "win32")
-user_rc_path = abspath(expanduser('~/.condarc'))
-escaped_user_rc_path = user_rc_path.replace("%", "%%")
+# user_rc_path = abspath(expanduser('~/.condarc'))
+# escaped_user_rc_path = user_rc_path.replace("%", "%%")
 escaped_sys_rc_path = abspath(join(sys.prefix, '.condarc')).replace("%", "%%")
+escaped_user_rc_path = escaped_sys_rc_path
 
 
 def generate_parser():
